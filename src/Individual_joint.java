@@ -1,3 +1,4 @@
+
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -10,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 		import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+
 public class Individual_joint {
 
 	public static void main(String[] args) throws InterruptedException {

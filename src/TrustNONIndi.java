@@ -91,8 +91,7 @@ public class TrustNONIndi {
 
 		// start filling values
 		// Key information
-		CRRScandofaic call = new CRRScandofaic();
-		call.Select(driver, "cust_2038", "Open New Settlement Account");
+		CRRScandofaic.Select( "cust_2038", "Open New Settlement Account");
 
 		driver.findElement(By.name("LE_EMAIL")).sendKeys(email); // Email
 		driver.findElement(By.name("cust_47")).sendKeys("Bombay"); // Place of birth
@@ -111,9 +110,9 @@ public class TrustNONIndi {
 				"//*[@id=\"newobject\"]/div/div[2]/div/div/div[3]/div/div[1]/div/div[2]/div[3]/div[1]/div/div/div/div[3]/div/select")));
 		YY.selectByValue(splittedStrings[2]);
 
-		call.Select(driver, "LE_GENDER", "Male"); // Gender
-		call.Select(driver, "cust_50", Customertype); // Customer type
-		call.Select(driver, "cust_920", customer_contact); // Customer contact
+		CRRScandofaic.Select(  "LE_GENDER", "Male"); // Gender
+		CRRScandofaic.Select( "cust_50", Customertype); // Customer type
+		CRRScandofaic.Select( "cust_920", customer_contact); // Customer contact
 
 
 
@@ -129,7 +128,7 @@ public class TrustNONIndi {
 		clients.sendKeys(Keys.ARROW_DOWN);
 		clients.sendKeys(Keys.ENTER);
 
-		call.Select(driver, "cust_162", "Yes"); // Sole owner
+		CRRScandofaic.Select( "cust_162", "Yes"); // Sole owner
 
 		// Employment section
 
@@ -235,10 +234,10 @@ public class TrustNONIndi {
 
 		///// CRRS START
 
-		call.CRRSC(driver);
+		CRRScandofaic.CRRSC(driver);
 
 		/// fill account info
-		call.fillAccountInfo(driver);
+		CRRScandofaic.fillAccountInfo(driver);
 		/// Account information complete
 
 		// clicking on process appliacation

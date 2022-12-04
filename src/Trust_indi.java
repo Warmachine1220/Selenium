@@ -101,8 +101,8 @@ public class Trust_indi {
 
 	//start filling values
 	//Key information
-	CRRScandofaic call = new CRRScandofaic();
-	call.Select(driver, "cust_2038", "Open New Settlement Account");
+	
+	CRRScandofaic.Select( "cust_2038", "Open New Settlement Account");
 
 	driver.findElement(By.name("LE_EMAIL")).sendKeys(email); //Email
 	driver.findElement(By.name("cust_47")).sendKeys("Bombay"); //Place of birth
@@ -118,11 +118,10 @@ public class Trust_indi {
 	Select YY =new Select(driver.findElement(By.xpath("//*[@id=\"newobject\"]/div/div[2]/div/div/div[3]/div/div[1]/div/div[2]/div[3]/div[1]/div/div/div/div[3]/div/select")));
 	YY.selectByValue(splittedStrings[2]);
 
-	call.Select(driver, "LE_GENDER", "Male"); // Gender
-	call.Select(driver, "cust_50", Customertype); // Customer type
-	call.Select(driver, "cust_920", customer_contact); // Customer contact
-
-	call.Select(driver, "cust_66", CIVIL); // Civil status
+	CRRScandofaic.Select(  "LE_GENDER", "Male"); // Gender
+	CRRScandofaic.Select(  "cust_50", Customertype); // Customer type
+	CRRScandofaic.Select(  "cust_920", customer_contact); // Customer contact
+	CRRScandofaic.Select( "cust_66", CIVIL); // Civil status
 	
 	driver.findElement(By.name("cust_1806")).sendKeys("12345Qwert");
 	//Select business_Segment = new Select(driver.findElement(By.name("cust_2592"))); //Segment type autofilling right now
@@ -136,7 +135,7 @@ public class Trust_indi {
 
 
 
-	call.Select(driver, "cust_162", "Yes"); // Sole owner
+	CRRScandofaic.Select( "cust_162", "Yes"); // Sole owner
 
 	//Employment section
 
@@ -323,11 +322,11 @@ Select mail = new Select(driver.findElement(By.name("cust_1812"))); //mailing ad
 
 	///// CRRS START
 
-	call.CRRSC(driver);
+	CRRScandofaic.CRRSC(driver);
 
 
 	/// fill account info
-	call.fillAccountInfo(driver);
+	CRRScandofaic.fillAccountInfo(driver);
 	///Account information complete
 
 

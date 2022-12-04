@@ -3,8 +3,6 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Scanner;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 public class check {
 
@@ -30,25 +28,7 @@ public class check {
 		int ss = fjf.get(fjf.DAY_OF_WEEK);
 		System.out.println(ss);
 
-		JSONObject vishal = new JSONObject();
-		vishal.put("Name", "vishal");
-		JSONArray hash = new JSONArray();
-
-		String[] hii = { "this", "yes", "oops", "doops" };
-		hash.add("sdfsd");
-		hash.add("fff");
-		vishal.put("object", hash);
-
-		try {
-			FileWriter gile = new FileWriter("D:/newfile.json");
-			gile.write(vishal.toJSONString());
-			gile.close();
-
-			System.out.println("done");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 	}
-}
+
