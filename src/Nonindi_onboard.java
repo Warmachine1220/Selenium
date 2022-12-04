@@ -17,7 +17,7 @@ public class Nonindi_onboard {
 
 		// $$ Please Provide values here first Jai bhole kiii
 		int f = (int) (Math.random() * 10000);
-		String company_name = "testing check";
+		String company_name = "testing checkb";
 		String Phone_no = "932101" + f;
 		String product = "EASY ACCOUNT";
 		String DOB = "24-7-1999"; // DD-MM-YYYY
