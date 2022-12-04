@@ -19,7 +19,7 @@ public class Individual_onboard {
 		String Salutation = "";
 		String suffix = "";
 
-		String FIRSTNAME = "NAMEee";
+		String FIRSTNAME = "bishal";
 		String Middlename = "";
 		String LASTNAME = "ISe";
 		int MOBILE = 9852825;
